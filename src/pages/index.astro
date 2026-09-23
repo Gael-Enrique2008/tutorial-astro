@@ -1,34 +1,35 @@
 ---
-
+const pageTitle = "Página de inicio";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-  		<a href="/">Inicio</a>
-    	<a href="/about/">Sobre mí</a>
-    	<a href="/blog/">Blog</a>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
 
-  		<h1>Sobre mí</h1>
-  		<h2>... ¡y mi nuevo sitio Astro!</h2>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/about/">Sobre mí</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </header>
 
-  		<p>
-    		Estoy trabajando en el tutorial introductorio de Astro.
-    		Esta es la segunda página de mi sitio web, ¡y es la primera
-    		que he construido yo mismo!
-  		</p>
+    <main>
+      <h1>Mi sitio Astro</h1>
 
-  		<p>
-    		Este sitio se irá actualizando a medida que vaya completando
-    		más partes del tutorial, ¡así que no dejes de visitarlo para
-    		ver cómo va mi viaje!
-  		</p>
-	</body>
+      <p>
+        Bienvenido a mi primer sitio web creado con Astro.
+      </p>
+
+      <p>
+        En este proyecto estoy aprendiendo a crear páginas,
+        utilizar Markdown y agregar contenido dinámico.
+      </p>
+    </main>
+  </body>
 </html>

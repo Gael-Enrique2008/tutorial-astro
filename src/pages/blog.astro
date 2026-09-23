@@ -1,24 +1,52 @@
+---
+const pageTitle = "Mi blog de aprendizaje de Astro";
+---
+
+<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Mi blog Astro</title>
+    <title>{pageTitle}</title>
   </head>
 
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mí</a>
-    <a href="/blog/">Blog</a>
+    <header>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/about/">Sobre mí</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </header>
 
-    <h1>Mi blog de aprendizaje sobre Astro</h1>
+    <main>
+      <h1>{pageTitle}</h1>
 
-    <p>Aquí publicaré mi progreso mientras aprendo Astro.</p>
+      <p>
+        Estas son mis primeras publicaciones aprendiendo Astro.
+      </p>
 
-    <ul>
-      <li><a href="/posts/post-1/">Publicación 1</a></li>
-      <li><a href="/posts/post-2/">Publicación 2</a></li>
-      <li><a href="/posts/post-3/">Publicación 3</a></li>
-    </ul>
+      <h2>Publicaciones</h2>
 
+      <ul>
+        <li>
+          <a href="/posts/post-1/">
+            Publicación 1
+          </a>
+        </li>
+
+        <li>
+          <a href="/posts/post-2/">
+            Publicación 2
+          </a>
+        </li>
+
+        <li>
+          <a href="/posts/post-3/">
+            Publicación 3
+          </a>
+        </li>
+      </ul>
+    </main>
   </body>
 </html>
