@@ -1,4 +1,6 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "Sobre mí";
@@ -8,9 +10,8 @@ const identity = {
   country: "México",
   occupation: "Estudiante de Desarrollo de Software",
   hobbies: [
-    "programación",
-    "videojuegos",
-    "plantas"
+    "plantas",
+    "videojuegos"
   ],
 };
 
@@ -27,7 +28,6 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
-// Variables CSS
 const skillColor = "crimson";
 const fontWeight = "bold";
 const textCase = "uppercase";
@@ -55,11 +55,7 @@ const textCase = "uppercase";
   </head>
 
   <body>
-    <header>
-      <nav>
-        <Navigation />
-      </nav>
-    </header>
+    <Navigation />
 
     <main>
       <h1>{pageTitle}</h1>
@@ -110,5 +106,7 @@ const textCase = "uppercase";
           : <p>Mi objetivo no son 3 días.</p>
       }
     </main>
+
+    <Footer />
   </body>
 </html>
