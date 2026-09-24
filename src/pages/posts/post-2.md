@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mi segunda publicación en el blog"
-pubDate: 2022-07-15
-description: "Aprender también significa resolver errores y seguir intentando."
-author: "Gael"
+pubDate: 2022-07-01
+description: "Esta es la primera publicación de mi nuevo blog Astro."
+author: "Alumno de Astro"
 image:
-  url: "https://docs.astro.build/assets/rays.webp"
-  alt: "El logotipo de Astro sobre un fondo oscuro con rayos de colores."
-tags: ["astro", "markdown", "comunidad", "aprendizaje"]
+  url: "https://docs.astro.build/assets/rose.webp"
+  alt: "El logotipo de Astro sobre un fondo oscuro con un brillo rosado."
+tags: ["astro", "bloguear", "aprender en público"]
 ---
 
 # Mi segunda publicación
