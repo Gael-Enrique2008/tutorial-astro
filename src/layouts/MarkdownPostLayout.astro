@@ -1,7 +1,12 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
+
+// Convierte la fecha de forma segura
+const publishDate = frontmatter.pubDate
+  ? new Date(frontmatter.pubDate).toISOString().slice(0, 10)
+  : "Sin fecha";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -13,7 +18,7 @@ const { frontmatter } = Astro.props;
     />
 
     <p class="fecha">
-      Publicado el: {frontmatter.pubDate.toString().slice(0, 10)}
+        Publicado el: {publishDate}
     </p>
 
     <p class="descripcion">
