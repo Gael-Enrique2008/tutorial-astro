@@ -1,38 +1,18 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "Página de inicio";
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Mi impresionante subtítulo del blog</h2>
 
-  <body>
-    <Header />
+  <p>
+    Bienvenido a mi primer sitio web creado con Astro.
+  </p>
 
-    <main>
-      <h1>Mi sitio Astro</h1>
-
-      <p>
-        Bienvenido a mi primer sitio web creado con Astro.
-      </p>
-
-      <p>
-        En este proyecto estoy aprendiendo a crear páginas,
-        utilizar Markdown y agregar contenido dinámico.
-      </p>
-    </main>
-
-    <Footer />
-    <script>
-        import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
+  <p>
+    En este proyecto estoy aprendiendo a crear páginas,
+    utilizar Markdown, componentes y layouts.
+  </p>
+</BaseLayout>
