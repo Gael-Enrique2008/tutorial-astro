@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
 
 const pageTitle = "Página de inicio";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+
   <h2>Mi impresionante subtítulo del blog</h2>
 
   <p>
@@ -15,4 +17,10 @@ const pageTitle = "Página de inicio";
     En este proyecto estoy aprendiendo a crear páginas,
     utilizar Markdown, componentes y layouts.
   </p>
+
+  <Greeting
+    client:load
+    messages={["Hej", "Hallo", "Hola", "Habari"]}
+  />
+
 </BaseLayout>
