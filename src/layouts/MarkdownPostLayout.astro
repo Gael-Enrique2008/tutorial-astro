@@ -2,82 +2,26 @@
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
-
-const publishDate = frontmatter.pubDate
-  ? new Date(frontmatter.pubDate).toISOString().slice(0, 10)
-  : 'Sin fecha';
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <article class="blog-post">
+  <p>
+    {frontmatter.pubDate.toString().slice(0, 10)}
+  </p>
 
-    <img
-      src={frontmatter.image.url}
-      alt={frontmatter.image.alt}
-      width="500"
-    />
+  <p>
+    <em>{frontmatter.description}</em>
+  </p>
 
-    <p class="fecha">
-      Publicado el: {publishDate}
-    </p>
+  <p>
+    Escrito por: {frontmatter.author}
+  </p>
 
-    <p class="descripcion">
-      <em>{frontmatter.description}</em>
-    </p>
+  <img
+    src={frontmatter.image.url}
+    width="300"
+    alt={frontmatter.image.alt}
+  />
 
-    <p class="autor">
-      Escrito por: <strong>{frontmatter.author}</strong>
-    </p>
-
-    <div class="etiquetas">
-      {
-        frontmatter.tags.map((tag) => (
-          <span class="tag">{tag}</span>
-        ))
-      }
-    </div>
-
-    <hr />
-
-    <slot />
-  </article>
+  <slot />
 </BaseLayout>
-
-<style>
-  .blog-post {
-    margin-top: 2rem;
-  }
-
-  img {
-    display: block;
-    margin: 1rem auto;
-    max-width: 100%;
-    border-radius: 12px;
-  }
-
-  .fecha,
-  .autor {
-    color: #555;
-    font-size: 0.95rem;
-  }
-
-  .descripcion {
-    font-size: 1.1rem;
-    margin: 1rem 0;
-  }
-
-  .etiquetas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-  }
-
-  .tag {
-    background-color: #4c1d95;
-    color: white;
-    padding: 0.3rem 0.7rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-  }
-</style>
