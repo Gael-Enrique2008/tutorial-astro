@@ -1,13 +1,14 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mi primera publicación en el blog"
-pubDate: 2026-09-23
 description: "Esta es la primera publicación de mi nuevo blog Astro."
-author: "Gael"
+author: "Alumno de Astro"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "El logotipo de Astro sobre un fondo oscuro con un brillo rosado."
 tags: ["astro", "bloguear", "aprender en público"]
 ---
+
 
 # Mi primera publicación en el blog
 
